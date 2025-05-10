@@ -6,6 +6,8 @@ a simple bash script for updating bedrock and all stratums
 # installation
 packages needed = <ins>bash, python & sudo</ins>
 
+
+
 run **install.sh** :
 
      ./install.sh
