@@ -12,6 +12,10 @@ run **install.sh** (u must chmod +x the file before):
 
      ./install.sh
 
+done, now u can run it by running:
+
+     bedrockupdate
+
 # add new stratums to the script
 the script only has main stratums, so if u need to add one
 heres a template to add new stratums to script:
