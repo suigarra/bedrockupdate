@@ -8,7 +8,7 @@ packages needed = <ins>bash, python & sudo</ins>
 
 
 
-run **install.sh** :
+run **install.sh** (u must chmod +x the file before):
 
      ./install.sh
 
