@@ -4,23 +4,14 @@ a bash script for updating bedrock and all stratums
 <img src="https://img.shields.io/badge/-BedrockLinux_0.7-blue?style=social&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/-GNU_Bash-white?style=social&logo=gnu%20bash&logoColor=black">
 
 # installation
-packages needed = bash & sudo
+packages needed = <ins>bash, python & sudo</ins>
 
-download the bash script and move it into /bedrock/bin/:
+run **install.sh** :
 
-         sudo cp /path/to/bedrockupdate /bedrock/bin/
-         
-now make sure to change the permissions of the bash script so we can execute it
+     ./install.sh
 
-         sudo chmod +x /bedrock/bin/bedrockupdate
-         
-done, now u can test bedrockupdate:
-
-         bedrockupdate
-         
 # add new stratums to the script
 the script only has main stratums, so if u need to add one
-
 heres a template to add new stratums to script:
 
    ```ruby
@@ -33,6 +24,9 @@ heres a template to add new stratums to script:
    fi
    ```
 
-replace "stratumname" with the stratums name and stratumupdate with the stratum's package manager command that updates it
+file is at **/bedrock/bin/bedrockupdate**
+
+replace **"stratumname"** with the stratums name 
+and **"stratumupdate"** with the stratum's package manager command that updates it
 
    
