@@ -1,5 +1,5 @@
 # bedrockupdate
-a bash script for updating bedrock and all stratums
+a simple bash script for updating bedrock and all stratums
 
 <img src="https://img.shields.io/badge/-BedrockLinux_0.7-blue?style=social&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/-GNU_Bash-white?style=social&logo=gnu%20bash&logoColor=black">
 
