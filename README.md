@@ -1,5 +1,8 @@
 # bedrockupdate
 a bash script for updating bedrock and all stratums
+
+<img src="https://img.shields.io/badge/-BedrockLinux_0.7-blue?style=social&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/-GNU_Bash-white?style=social&logo=gnu%20bash&logoColor=black">
+
 # installation
 packages needed = bash & sudo
 
@@ -16,6 +19,8 @@ done, now u can test bedrockupdate:
          bedrockupdate
          
 # add new stratums to the script
+the script only has main stratums, so if u need to add one
+
 heres a template to add new stratums to script:
 
    ```ruby
