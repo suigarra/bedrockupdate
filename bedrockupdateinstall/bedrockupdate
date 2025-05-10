@@ -1,0 +1,94 @@
+#!/bin/bash
+
+number=0
+
+echo "Loading bedrockupdate.."
+echo "Fetching Stratums..."
+sudo echo "Done!"
+if [ -d /bedrock/strata/bedrock ]; then
+   sudo brl update
+   echo "-------------------------------------------------------"
+   echo "Bedrock Updated!"
+   echo "-------------------------------------------------------"
+fi
+if [ -d /bedrock/strata/arch ]; then
+   echo "Found Arch Stratum !"
+   echo "Running Updates.."
+   sudo brl strat arch pacman -Syu
+   echo "Arch Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/void ]; then
+   echo "Found Void Stratum !"
+   echo "Running Updates.."
+   sudo brl strat void xbps-install -Su
+   echo "Void Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/void-musl ]; then 
+   echo "Found Void-musl Stratum !"
+   echo "Running Updates.."
+   sudo brl strat void-musl xbps-install -Su
+   echo "Void Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/alpine ]; then
+   echo "Found Alpine Stratum !"
+   echo "Running Updates.."
+   sudo brl strat alpine apk update
+   sudo brl strat alpine apk upgrade
+   echo "Alpine Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/centos ]; then
+   echo "Found CentOS Stratum !"
+   echo "Running Updates.."
+   sudo brl strat centos dnf check-update
+   sudo brl strat centos dnf update
+   echo "CentOS Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/debian ]; then
+   echo "Found Debian Stratum !"
+   echo "Running Updates.."
+   sudo brl strat debian apt-get update
+   sudo brl strat debian apt-get upgrade
+   echo "Debian Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/devuan ]; then
+   echo "Found Devuan Stratum !"
+   echo "Running Updates.."
+   sudo brl strat devuan apt-get update
+   sudo brl strat devuan apt-get upgrade
+   echo "Devuan Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/fedora ]; then
+   echo "Found Fedora Stratum !"
+   echo "Running Updates.."
+   sudo brl strat fedora dnf check-update
+   sudo brl strat fedora dnf update
+   echo "Fedora Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/gentoo ]; then
+   echo "Found Gentoo Stratum !"
+   echo "Running Updates.."
+   sudo brl strat gentoo emerge --sync
+   sudo brl strat gentoo emerge -vuDN @world
+   echo "Gentoo Stratum Done !"
+   number=$((number+1))
+fi
+if [ -d /bedrock/strata/ubuntu ]; then
+   echo "Found Ubuntu Stratum !"
+   echo "Running Updates.."
+   sudo brl strat ubuntu apt-get update
+   sudo brl strat ubuntu apt-get upgrade
+   echo "Ubuntu Stratum Done !"
+   number=$((number+1))
+fi
+echo "-------------------------------------------------------"
+echo "bedrockupdate Completed !"
+echo $number "Stratum Updated !"
+echo "-------------------------------------------------------"
